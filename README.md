@@ -4,7 +4,7 @@
 [![](https://img.shields.io/npm/v/stimulus-projector.svg)](https://www.npmjs.com/package/stimulus-projector)
 [![](https://github.com/leastbad/stimulus-projector/workflows/Lint/badge.svg)](https://github.com/leastbad/stimulus-projector)
 [![](https://img.shields.io/github/license/leastbad/stimulus-projector.svg)](https://github.com/leastbad/stimulus-projector)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/PENDING/deploy-status)](https://stimulus-projector.netlify.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0fece360-ab60-4f72-9194-0f01644e2d16/deploy-status)](https://app.netlify.com/sites/trance/deploys)
 
 ## Getting started
 
