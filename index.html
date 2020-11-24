@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>Stimulus Projector</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      #projector {
+        width: 1280px;
+        height: 720px;
+      }
+    </style>
+    <script type="module" src="./src/index.js" defer></script>
+    <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js" defer></script>
+
+    <script type="module" defer>
+      import Projector from './src/index.js'
+      import Howler from './src/howler.js'
+      import Dat from './src/dat.js'
+
+      const application = Stimulus.Application.start()
+      application.register('projector', Projector)
+      application.register('howler', Howler)
+      application.register('dat', Dat)
+    </script>
+  </head>
+  <body>
+    <div id="container" data-controller="howler dat">
+      <div id="projector" data-controller="projector" data-action="resize@window->projector#resize"></div>
+    </div>
+  </body>
+</html>
