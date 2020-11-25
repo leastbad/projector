@@ -6,14 +6,14 @@ export default class extends Controller {
     this.element['howler'] = this
     this.howl = new Howl({
       src: [
-        'http://d3oke4rbydc94l.cloudfront.net/obie.webm',
-        'http://d3oke4rbydc94l.cloudfront.net/obie.mp3'
+        '//dxmyymj4iibfv.cloudfront.net/obie.webm',
+        '//dxmyymj4iibfv.cloudfront.net/obie.mp3'
       ],
       html5: true
     })
       .on('load', () => {
         const projector = document.getElementById('projector').projector
-        projector.duration = Math.ceil(this.howl.duration())
+        projector.duration = Math.ceil(this.howl.duration()) * projector.fps
       })
       .on('end', () => {
         this.playing = false

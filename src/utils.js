@@ -16,11 +16,10 @@ export function vector (c) {
 export function material (c) {
   const nextFrame = c.frame < c.duration ? c.frame + 1 : c.frame
 
-  c.disp =
-    c.filter == 0
-      ? c.loader.load()
-      : c.loader.load(`${c.source}${c.dispPath}${c.filter}.jpg`, c.render)
-  c.disp.magFilter = c.disp.minFilter = THREE.LinearFilter
+  if (c.filter > 0) {
+    c.disp = c.loader.load(`${c.source}${c.dispPath}${c.filter}.jpg`, c.render)
+    c.disp.magFilter = c.disp.minFilter = THREE.LinearFilter
+  }
 
   c.texture1 = c.loader.load(
     `${c.source}${c.framePath}${c.frame}.webp`,

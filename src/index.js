@@ -46,7 +46,7 @@ export default class extends Controller {
       this.commonAngle = Math.PI / 4
       this.angle1 = this.commonAngle
       this.angle2 = -this.commonAngle * 3
-      this.speed = 5
+      this.speed = 1
       this.easing = 'expo.out'
 
       this.element['projector'] = this
@@ -57,8 +57,9 @@ export default class extends Controller {
       this.frame = 1
       this.duration = 2
       this.filter = 0
-      this.source = '//d3oke4rbydc94l.cloudfront.net'
-      this.framePath = '/obie'
+      this.fps = 1
+      this.source = '//dxmyymj4iibfv.cloudfront.net'
+      this.framePath = `/${this.fps}fps/`
       this.dispPath = '/dispImages/'
 
       this.scene = new THREE.Scene()
@@ -86,7 +87,7 @@ export default class extends Controller {
       this.render = () => this.renderer.render(this.scene, camera)
 
       this.loader = new THREE.TextureLoader()
-      this.loader.crossOrigin = ''
+      // this.loader.crossOrigin = ''
 
       this.mat = material(this)
       this.geometry = new THREE.PlaneBufferGeometry(this.oW, this.oH, 1)
@@ -116,7 +117,7 @@ export default class extends Controller {
           this.playing = false
           this.seek(1)
         }
-      }, 1000)
+      }, 1000 / this.fps)
     else clearInterval(this.runLoop)
   }
 

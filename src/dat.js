@@ -11,7 +11,7 @@ export default class extends Controller {
       this.obie = {
         frame: 1,
         filter: 0,
-        speed: 5,
+        speed: 2,
         intensity1: 0.02,
         intensity2: 0.02,
         angle1: 4,
@@ -31,7 +31,7 @@ export default class extends Controller {
       this.gui.add(this.obie, 'filter', 0, 16, 1).onChange(value => {
         this.projector.filter = value
       })
-      this.gui.add(this.obie, 'speed', 1, 10, 1).onChange(value => {
+      this.gui.add(this.obie, 'speed', 0.1, 10, 0.1).onChange(value => {
         this.projector.speed = value
       })
       this.gui.add(this.obie, 'angle1', 2, 10, 0.5).onChange(value => {
