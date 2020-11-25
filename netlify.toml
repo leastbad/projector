@@ -1,3 +1,7 @@
 [build]
   publish="build"
   command="yarn prod"
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
