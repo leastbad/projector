@@ -87,7 +87,7 @@ export default class extends Controller {
       this.render = () => this.renderer.render(this.scene, camera)
 
       this.loader = new THREE.TextureLoader()
-      // this.loader.crossOrigin = ''
+      this.loader.crossOrigin = ''
 
       this.mat = material(this)
       this.geometry = new THREE.PlaneBufferGeometry(this.oW, this.oH, 1)

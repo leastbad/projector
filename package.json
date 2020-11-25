@@ -35,7 +35,6 @@
   },
   "scripts": {
     "format": "prettier-standard  '**/*.{js,css,html}' --format",
-    "lint": "prettier-standard  '**/*.{js,css,html}' --lint",
     "dev": "snowpack dev",
     "prod": "snowpack build",
     "build": "pika build",
