@@ -36,5 +36,8 @@ export default class extends Controller {
     return this.howl.seek() + 1
   }
 
-  seek = position => this.howl.seek(position - 1)
+  seek = position => {
+    const projector = document.getElementById('projector').projector
+    this.howl.seek((position - 1) / projector.fps)
+  }
 }

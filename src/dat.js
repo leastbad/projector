@@ -21,8 +21,9 @@ export default class extends Controller {
           this.projector.play()
         }
       }
+      const frames = { 1: 7296, 2: 14592, 3: 21888, 4: 29184 }
       this.gui
-        .add(this.obie, 'frame', 1, 7296, 1)
+        .add(this.obie, 'frame', 1, frames[this.projector.fps], 1)
         .listen()
         .onChange(value => {
           this.projector.seek(value)
