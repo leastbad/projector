@@ -57,7 +57,7 @@ export default class extends Controller {
       this.frame = 1
       this.duration = 2
       this.filter = 0
-      this.fps = 1
+      this.fps = 3
       this.source = '//dxmyymj4iibfv.cloudfront.net'
       this.framePath = `/${this.fps}fps/`
       this.dispPath = '/dispImages/'
