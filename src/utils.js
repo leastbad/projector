@@ -29,6 +29,10 @@ export function material (c) {
     `${c.source}${c.framePath}${nextFrame}.webp`,
     c.render
   )
+  // let preload = document.createElement('img')
+  // preload.src = `${c.source}${c.framePath}${nextFrame + 1}.webp`
+  // preload = document.createElement('img')
+  // preload.src = `${c.source}${c.framePath}${nextFrame + 2}.webp`
 
   c.texture1.magFilter = c.texture2.magFilter = THREE.LinearFilter
   c.texture1.minFilter = c.texture2.minFilter = THREE.LinearFilter

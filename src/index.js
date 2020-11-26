@@ -102,6 +102,10 @@ export default class extends Controller {
     if (this.playing)
       this.runLoop = setInterval(() => {
         document.getElementById('container').dat.obie.frame = this.frame
+        // for (let x = this.frame + 2; x < this.frame + 3; x++) {
+        //   let preload = document.createElement('img')
+        //   preload.src = `${this.source}${this.framePath}${x}.webp`
+        // }
         this.mat = material(this)
         this.scene.children[0].material = this.mat
         gsap.to(this.mat.uniforms.dispFactor, {
